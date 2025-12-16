@@ -6,39 +6,35 @@ public class MadLib {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Please enter a name(noun:names a person, place, thing, or idea. Robot, donkey, Jojo, freedom, Voorhees): ");
-        String name = input.nextLine();
+        String name = input.nextLine().toLowerCase();
         System.out.print("Please enter a verb(an action or state of being. (Past tense): Ate, squished, danced, ran, thought): ");
-        String verb1 = input.nextLine();
+        String verb1 = input.nextLine().toLowerCase();;
         System.out.print("Please enter a persons name (noun: names a person): ");
-        String name2 = input.nextLine();
+        String name2 = input.nextLine().toLowerCase();;
         System.out.print("Please enter an adjective(describes or modifies a noun. Bright, tired, enormous, happy): ");
-        String adj = input.nextLine();
+        String adj = input.nextLine().toLowerCase();;
         System.out.print("Please enter an adjective(describes or modifies a noun. Bright, tired, enormous, happy): ");
-        String adj2 = input.nextLine();
+        String adj2 = input.nextLine().toLowerCase();;
         System.out.print("Please enter a verb(an action or state of being. (Past tense) Recommended: shrinking, growing, thinking, not working): ");
-        String verb2 = input.nextLine();
+        String verb2 = input.nextLine().toLowerCase();;
         System.out.print("Please enter a noun(names a person, place, thing, or idea. Recommended: table, chair, desk, seat, couch): ");
-        String noun = input.nextLine();
+        String noun = input.nextLine().toLowerCase();
         System.out.print("Please enter a noun(names a person, place, thing, or idea. Recommended: homework, papers, pencils, backpack): ");
-        String noun2 = input.nextLine();
+        String noun2 = input.nextLine().toLowerCase();
         System.out.print("Please enter a noun(names a person, place, thing, or idea. Recommended: decribes someone, something that can move): ");
-        String noun3 = input.nextLine();
+        String noun3 = input.nextLine().toLowerCase();
         System.out.print("Please enter an adjective(describes or modifies a noun. Recommended: done): ");
-        String adj3 = input.nextLine();
+        String adj3 = input.nextLine().toLowerCase();
 
         
 
         
 
-        System.out.println("Once I, " + name + ", genuinely " + verb1 + ".");
-        System.out.println("My fortnite duo, " + name2 + ", is " + adj + ".");
-        System.out.println("We are " + adj2 + " and jolly!");
-        System.out.println("Our brains are " + verb2 + "!"); 
-        System.out.println("Put the homework on the " + noun + ".");
-        System.out.println("My dog stole my " + noun2 + ", and then ran away from " + noun3 + ".");
-        System.out.println("Even the GPT saying 'boi, you're so o din din " + adj3 + "'.");
+        System.out.println("\n\tOnce I, " + capitalize(name) + ", genuinely " + verb1 + "." + " \n\tMy fortnite duo, " + capitalize(name2) + ", was " + adj + ".\n\tWe were " + adj2 + " and jolly! \n\tOur brains were " + verb2 + "!\n\tPut the homework on the " + noun + ".\n\tMy dog stole my " + noun2 + ", and then ran away from " + noun3 + ".\n\tEven the GPT saying 'boi, you're so o din din " + adj3 + "'.");
 
 
     }
-
+    public static String capitalize(String word){
+        return word.substring(0,1).toUpperCase() + word.substring(1);
+    }
 }
